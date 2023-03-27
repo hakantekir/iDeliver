@@ -12,11 +12,19 @@ enum HTTPMethods: String {
     case post = "POST"
 }
 
-enum ErrorTypes: Error {
+enum NetworkError: Error {
     case invalidURL
+    case invalidResponse
     case invalidData
     case parseError
-    case generalError
+    case unknownError(Error)
+    case apiError(APIError)
+}
+
+struct APIError: Decodable {
+    let code: Int
+    let reason: String
+    let message: String
 }
 
 class NetworkHelper {
