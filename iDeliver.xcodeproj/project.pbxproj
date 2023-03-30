@@ -17,6 +17,9 @@
 		A210275B29952C330007C524 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210275A29952C330007C524 /* NetworkHelper.swift */; };
 		A258A59D2997E34500991838 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A258A59C2997E34500991838 /* Coordinator.swift */; };
 		A258A59F2997E39200991838 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A258A59E2997E39200991838 /* Storyboarded.swift */; };
+		A2BD859329D61462002820CA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BD859229D61462002820CA /* Authentication.storyboard */; };
+		A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859529D619BB002820CA /* RegisterViewController.swift */; };
+		A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859729D619CC002820CA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		A210275A29952C330007C524 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		A258A59C2997E34500991838 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A258A59E2997E39200991838 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		A2BD859229D61462002820CA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		A2BD859529D619BB002820CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A2BD859729D619CC002820CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		A258A5992997DE1400991838 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A2BD859129D6140C002820CA /* Authentication */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -141,6 +148,32 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A2BD859029D5FDA4002820CA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD859529D619BB002820CA /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A2BD859129D6140C002820CA /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD859229D61462002820CA /* Authentication.storyboard */,
+				A2BD859029D5FDA4002820CA /* Register */,
+				A2BD859429D61997002820CA /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		A2BD859429D61997002820CA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD859729D619CC002820CA /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BD859329D61462002820CA /* Authentication.storyboard in Resources */,
 				A210274F299504A10007C524 /* LaunchScreen.storyboard in Resources */,
 				A210274C299504A10007C524 /* Assets.xcassets in Resources */,
 				A210274A299504A00007C524 /* Main.storyboard in Resources */,
@@ -214,9 +248,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */,
 				A210275929952C260007C524 /* NetworkManager.swift in Sources */,
 				A2102747299504A00007C524 /* ViewController.swift in Sources */,
 				A258A59D2997E34500991838 /* Coordinator.swift in Sources */,
+				A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */,
 				A210275B29952C330007C524 /* NetworkHelper.swift in Sources */,
 				A2102743299504A00007C524 /* AppDelegate.swift in Sources */,
 				A2102745299504A00007C524 /* SceneDelegate.swift in Sources */,
