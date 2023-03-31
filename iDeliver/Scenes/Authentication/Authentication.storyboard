@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,13 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="hVP-Fb-4fx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-Vg-AQb">
+                                <rect key="frame" x="39.333333333333343" y="483.66666666666669" width="314.33333333333326" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="fkb-xU-JS5" eventType="touchUpInside" id="z6z-hV-OO4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-d1-PHX">
+                                <rect key="frame" x="39.333333333333343" y="350.66666666666669" width="314.33333333333326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6W-D1-9ab">
+                                <rect key="frame" x="39.333333333333343" y="409.66666666666669" width="314.33333333333326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iv9-m5-NSl">
+                                <rect key="frame" x="39.333333333333343" y="291.66666666666669" width="314.33333333333326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J49-f9-rwj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WYw-d1-PHX" firstAttribute="top" secondItem="Iv9-m5-NSl" secondAttribute="bottom" constant="25" id="0p9-gP-iCR"/>
+                            <constraint firstItem="X6W-D1-9ab" firstAttribute="width" secondItem="wyE-Vg-AQb" secondAttribute="width" id="1sO-VT-cFx"/>
+                            <constraint firstItem="wyE-Vg-AQb" firstAttribute="width" secondItem="hVP-Fb-4fx" secondAttribute="width" multiplier="0.8" id="CQN-t0-bMj"/>
+                            <constraint firstItem="J49-f9-rwj" firstAttribute="bottom" secondItem="wyE-Vg-AQb" secondAttribute="bottom" constant="300" id="G35-dt-FNY"/>
+                            <constraint firstItem="X6W-D1-9ab" firstAttribute="top" secondItem="WYw-d1-PHX" secondAttribute="bottom" constant="25" id="HKy-0h-gie"/>
+                            <constraint firstItem="X6W-D1-9ab" firstAttribute="centerX" secondItem="J49-f9-rwj" secondAttribute="centerX" id="I3R-cX-vWB"/>
+                            <constraint firstItem="WYw-d1-PHX" firstAttribute="centerX" secondItem="J49-f9-rwj" secondAttribute="centerX" id="a2w-a5-DiX"/>
+                            <constraint firstItem="WYw-d1-PHX" firstAttribute="width" secondItem="wyE-Vg-AQb" secondAttribute="width" id="gx3-IA-AXM"/>
+                            <constraint firstItem="Iv9-m5-NSl" firstAttribute="centerX" secondItem="J49-f9-rwj" secondAttribute="centerX" id="hJq-KP-NwY"/>
+                            <constraint firstItem="wyE-Vg-AQb" firstAttribute="centerX" secondItem="J49-f9-rwj" secondAttribute="centerX" id="oF7-kD-VOA"/>
+                            <constraint firstItem="wyE-Vg-AQb" firstAttribute="top" secondItem="X6W-D1-9ab" secondAttribute="bottom" constant="40" id="oRR-KO-IQY"/>
+                            <constraint firstItem="Iv9-m5-NSl" firstAttribute="width" secondItem="wyE-Vg-AQb" secondAttribute="width" id="ufM-9a-hvv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="WYw-d1-PHX" id="snX-K3-dz4"/>
+                        <outlet property="nameTextField" destination="Iv9-m5-NSl" id="PU9-tS-ydL"/>
+                        <outlet property="passwordTextField" destination="X6W-D1-9ab" id="c7O-Hm-IJU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3g-45-yK0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="-152"/>
+            <point key="canvasLocation" x="-167.17557251908397" y="-152.11267605633805"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="eug-gw-7sP">
