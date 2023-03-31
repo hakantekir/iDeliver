@@ -44,7 +44,7 @@
 		A2BD85A029D62F20002820CA /* RegisterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterManager.swift; sourceTree = "<group>"; };
 		A2BD85A229D62F2C002820CA /* RegisterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHelper.swift; sourceTree = "<group>"; };
 		A2BD85A429D63068002820CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertViewHelper.swift; path = iDeliver/Model/AlertViewHelper.swift; sourceTree = SOURCE_ROOT; };
+		A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertViewHelper.swift; path = iDeliver/Util/AlertViewHelper.swift; sourceTree = SOURCE_ROOT; };
 		A2BD85A829D74D3C002820CA /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 				A269DBF429D1A75A00131CEE /* Model */,
 				A210275629952C060007C524 /* Network */,
 				A269DBF329D1A70F00131CEE /* Resources */,
-				A258A59B2997DE3900991838 /* Util */,
+				A2473CDA29D7809100A9210D /* Util */,
 				A258A5992997DE1400991838 /* Scenes */,
 				A210274D299504A10007C524 /* LaunchScreen.storyboard */,
 				A2102750299504A10007C524 /* Info.plist */,
@@ -109,6 +109,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		A2473CDA29D7809100A9210D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		A258A5992997DE1400991838 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,14 +132,6 @@
 				A258A59E2997E39200991838 /* Storyboarded.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		A258A59B2997DE3900991838 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */,
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 		A269DBF229D1A6E500131CEE /* App */ = {
