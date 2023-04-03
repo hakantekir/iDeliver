@@ -15,6 +15,10 @@
 		A210275B29952C330007C524 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A210275A29952C330007C524 /* NetworkHelper.swift */; };
 		A258A59D2997E34500991838 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A258A59C2997E34500991838 /* Coordinator.swift */; };
 		A258A59F2997E39200991838 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = A258A59E2997E39200991838 /* Storyboarded.swift */; };
+		A25D4AF629DAE8ED002CBE11 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AF529DAE8ED002CBE11 /* LoginViewModel.swift */; };
+		A25D4AF829DAE903002CBE11 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AF729DAE903002CBE11 /* LoginCoordinator.swift */; };
+		A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */; };
+		A25D4AFD29DAE922002CBE11 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFB29DAE922002CBE11 /* LoginManager.swift */; };
 		A2BD859329D61462002820CA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BD859229D61462002820CA /* Authentication.storyboard */; };
 		A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859529D619BB002820CA /* RegisterViewController.swift */; };
 		A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859729D619CC002820CA /* LoginViewController.swift */; };
@@ -37,6 +41,10 @@
 		A210275A29952C330007C524 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		A258A59C2997E34500991838 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A258A59E2997E39200991838 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		A25D4AF529DAE8ED002CBE11 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A25D4AF729DAE903002CBE11 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		A25D4AFB29DAE922002CBE11 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		A2BD859229D61462002820CA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		A2BD859529D619BB002820CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2BD859729D619CC002820CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				A210275729952C0D0007C524 /* Core */,
+				A25D4AF929DAE922002CBE11 /* Login */,
 				A2BD859F29D62EFB002820CA /* Register */,
 			);
 			path = Network;
@@ -132,6 +141,15 @@
 				A258A59E2997E39200991838 /* Storyboarded.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		A25D4AF929DAE922002CBE11 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */,
+				A25D4AFB29DAE922002CBE11 /* LoginManager.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A269DBF229D1A6E500131CEE /* App */ = {
@@ -182,6 +200,7 @@
 		A2BD859429D61997002820CA /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A25D4AF729DAE903002CBE11 /* LoginCoordinator.swift */,
 				A2BD859C29D62611002820CA /* View */,
 				A2BD859B29D6260B002820CA /* ViewModel */,
 			);
@@ -207,6 +226,7 @@
 		A2BD859B29D6260B002820CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A25D4AF529DAE8ED002CBE11 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,14 +324,18 @@
 				A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */,
 				A2BD859E29D6294A002820CA /* RegisterViewModel.swift in Sources */,
 				A210275929952C260007C524 /* NetworkManager.swift in Sources */,
+				A25D4AFD29DAE922002CBE11 /* LoginManager.swift in Sources */,
 				A258A59D2997E34500991838 /* Coordinator.swift in Sources */,
 				A2BD85A729D74AF6002820CA /* AlertViewHelper.swift in Sources */,
 				A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */,
+				A25D4AF629DAE8ED002CBE11 /* LoginViewModel.swift in Sources */,
 				A210275B29952C330007C524 /* NetworkHelper.swift in Sources */,
 				A2102743299504A00007C524 /* AppDelegate.swift in Sources */,
 				A2102745299504A00007C524 /* SceneDelegate.swift in Sources */,
 				A2BD85A129D62F20002820CA /* RegisterManager.swift in Sources */,
 				A258A59F2997E39200991838 /* Storyboarded.swift in Sources */,
+				A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */,
+				A25D4AF829DAE903002CBE11 /* LoginCoordinator.swift in Sources */,
 				A2BD85A929D74D3C002820CA /* RegisterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +478,7 @@
 				DEVELOPMENT_TEAM = H3L57XFNX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDeliver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -481,6 +506,7 @@
 				DEVELOPMENT_TEAM = H3L57XFNX5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDeliver/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

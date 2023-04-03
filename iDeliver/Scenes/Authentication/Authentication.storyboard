@@ -28,7 +28,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYw-d1-PHX">
                                 <rect key="frame" x="39.333333333333343" y="350.66666666666669" width="314.33333333333326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X6W-D1-9ab">
                                 <rect key="frame" x="39.333333333333343" y="409.66666666666669" width="314.33333333333326" height="34"/>
@@ -38,7 +38,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iv9-m5-NSl">
                                 <rect key="frame" x="39.333333333333343" y="291.66666666666669" width="314.33333333333326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J49-f9-rwj"/>
@@ -71,13 +71,48 @@
         <!--Login View Controller-->
         <scene sceneID="eug-gw-7sP">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="osE-li-fRB" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="osE-li-fRB" customClass="LoginViewController" customModule="iDeliver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uhd-b5-SV0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-Gf-K7I">
+                                <rect key="frame" x="39.333333333333343" y="409" width="314.33333333333326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noB-8e-rma">
+                                <rect key="frame" x="39.333333333333343" y="483" width="314.33333333333326" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="osE-li-fRB" eventType="touchUpInside" id="hwe-3N-Gav"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-FF-RyM">
+                                <rect key="frame" x="39.333333333333343" y="345" width="314.33333333333326" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4Iy-jn-Dee"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1J3-FF-RyM" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="Mgk-ej-otB"/>
+                            <constraint firstItem="noB-8e-rma" firstAttribute="width" secondItem="uhd-b5-SV0" secondAttribute="width" multiplier="0.8" id="Mjk-ra-bwv"/>
+                            <constraint firstItem="1J3-FF-RyM" firstAttribute="width" secondItem="ahW-Gf-K7I" secondAttribute="width" id="VH6-BQ-o0w"/>
+                            <constraint firstItem="ahW-Gf-K7I" firstAttribute="width" secondItem="noB-8e-rma" secondAttribute="width" id="VPU-HH-pzQ"/>
+                            <constraint firstItem="noB-8e-rma" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="ZDZ-Kr-wZH"/>
+                            <constraint firstItem="ahW-Gf-K7I" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="cLA-Fu-jiA"/>
+                            <constraint firstItem="noB-8e-rma" firstAttribute="top" secondItem="ahW-Gf-K7I" secondAttribute="bottom" constant="40" id="f9I-fO-Tjp"/>
+                            <constraint firstItem="ahW-Gf-K7I" firstAttribute="top" secondItem="1J3-FF-RyM" secondAttribute="bottom" constant="30" id="lFc-rD-7qD"/>
+                            <constraint firstItem="4Iy-jn-Dee" firstAttribute="bottom" secondItem="noB-8e-rma" secondAttribute="bottom" constant="300" id="re7-tU-ZZk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mailTextField" destination="1J3-FF-RyM" id="7Rr-3r-n9j"/>
+                        <outlet property="passwordTextField" destination="ahW-Gf-K7I" id="rxZ-EW-QEN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2M-1Q-UEg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
