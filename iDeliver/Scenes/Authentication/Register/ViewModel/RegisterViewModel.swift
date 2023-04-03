@@ -12,6 +12,7 @@ import UIKit
 class RegisterViewModel {
     var coordinator: RegisterCoordinator?
     let manager = RegisterManager.shared
+    let keychainManager = KeychainManager.shared
     
     func register (name: String, email: String, password: String) {
         if (name.isEmpty || email.isEmpty || password.isEmpty) {
@@ -24,6 +25,11 @@ class RegisterViewModel {
             switch response {
             case .success(let response):
                 user.token = response.token
+                if self.keychainManager.save(key: "JWT", value: user.token ?? "") {
+                    DispatchQueue.main.sync {
+                        self.coordinator?.showMain()
+                    }
+                }
             case .failure(let failure):
                 DispatchQueue.main.sync {
                     let alert = AlertViewHelper.showAlert(title: failure.reason ?? "Error", message: failure.message ?? "Error")

@@ -20,6 +20,13 @@
 		A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */; };
 		A25D4AFD29DAE922002CBE11 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFB29DAE922002CBE11 /* LoginManager.swift */; };
 		A25D4AFF29DB595B002CBE11 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFE29DB595B002CBE11 /* GradientView.swift */; };
+		A25D4B0229DB6111002CBE11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25D4B0129DB6111002CBE11 /* Main.storyboard */; };
+		A25D4B0929DB6C85002CBE11 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B0829DB6C85002CBE11 /* HomeViewController.swift */; };
+		A25D4B0B29DB6CC1002CBE11 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B0A29DB6CC1002CBE11 /* MainTabBarController.swift */; };
+		A25D4B1029DB7123002CBE11 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B0F29DB7123002CBE11 /* SearchViewController.swift */; };
+		A25D4B1229DB712D002CBE11 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1129DB712D002CBE11 /* CartViewController.swift */; };
+		A25D4B1429DB7137002CBE11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1329DB7137002CBE11 /* ProfileViewController.swift */; };
+		A25D4B1629DB7336002CBE11 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1529DB7336002CBE11 /* KeychainManager.swift */; };
 		A2BD859329D61462002820CA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BD859229D61462002820CA /* Authentication.storyboard */; };
 		A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859529D619BB002820CA /* RegisterViewController.swift */; };
 		A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859729D619CC002820CA /* LoginViewController.swift */; };
@@ -47,6 +54,13 @@
 		A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		A25D4AFB29DAE922002CBE11 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		A25D4AFE29DB595B002CBE11 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A25D4B0129DB6111002CBE11 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A25D4B0829DB6C85002CBE11 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A25D4B0A29DB6CC1002CBE11 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		A25D4B0F29DB7123002CBE11 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A25D4B1129DB712D002CBE11 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		A25D4B1329DB7137002CBE11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A25D4B1529DB7336002CBE11 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		A2BD859229D61462002820CA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		A2BD859529D619BB002820CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2BD859729D619CC002820CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +138,7 @@
 			children = (
 				A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */,
 				A25D4AFE29DB595B002CBE11 /* GradientView.swift */,
+				A25D4B1529DB7336002CBE11 /* KeychainManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -132,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BD859129D6140C002820CA /* Authentication */,
+				A25D4B0029DB6101002CBE11 /* Main */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -152,6 +168,51 @@
 				A25D4AFB29DAE922002CBE11 /* LoginManager.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A25D4B0029DB6101002CBE11 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4B0129DB6111002CBE11 /* Main.storyboard */,
+				A25D4B0329DB64B2002CBE11 /* Home */,
+				A25D4B0C29DB70EA002CBE11 /* Search */,
+				A25D4B0D29DB70F2002CBE11 /* Cart */,
+				A25D4B0E29DB70F6002CBE11 /* Profile */,
+				A25D4B0A29DB6CC1002CBE11 /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A25D4B0329DB64B2002CBE11 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4B0829DB6C85002CBE11 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A25D4B0C29DB70EA002CBE11 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4B0F29DB7123002CBE11 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		A25D4B0D29DB70F2002CBE11 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4B1129DB712D002CBE11 /* CartViewController.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		A25D4B0E29DB70F6002CBE11 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A25D4B1329DB7137002CBE11 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		A269DBF229D1A6E500131CEE /* App */ = {
@@ -312,6 +373,7 @@
 				A2BD859329D61462002820CA /* Authentication.storyboard in Resources */,
 				A210274F299504A10007C524 /* LaunchScreen.storyboard in Resources */,
 				A210274C299504A10007C524 /* Assets.xcassets in Resources */,
+				A25D4B0229DB6111002CBE11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,18 +388,24 @@
 				A2BD85A529D63068002820CA /* User.swift in Sources */,
 				A2BD85A329D62F2C002820CA /* RegisterHelper.swift in Sources */,
 				A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */,
+				A25D4B1629DB7336002CBE11 /* KeychainManager.swift in Sources */,
 				A2BD859E29D6294A002820CA /* RegisterViewModel.swift in Sources */,
+				A25D4B0929DB6C85002CBE11 /* HomeViewController.swift in Sources */,
+				A25D4B1429DB7137002CBE11 /* ProfileViewController.swift in Sources */,
 				A210275929952C260007C524 /* NetworkManager.swift in Sources */,
 				A25D4AFD29DAE922002CBE11 /* LoginManager.swift in Sources */,
 				A258A59D2997E34500991838 /* Coordinator.swift in Sources */,
 				A2BD85A729D74AF6002820CA /* AlertViewHelper.swift in Sources */,
 				A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */,
 				A25D4AF629DAE8ED002CBE11 /* LoginViewModel.swift in Sources */,
+				A25D4B1029DB7123002CBE11 /* SearchViewController.swift in Sources */,
 				A210275B29952C330007C524 /* NetworkHelper.swift in Sources */,
+				A25D4B1229DB712D002CBE11 /* CartViewController.swift in Sources */,
 				A2102743299504A00007C524 /* AppDelegate.swift in Sources */,
 				A2102745299504A00007C524 /* SceneDelegate.swift in Sources */,
 				A2BD85A129D62F20002820CA /* RegisterManager.swift in Sources */,
 				A258A59F2997E39200991838 /* Storyboarded.swift in Sources */,
+				A25D4B0B29DB6CC1002CBE11 /* MainTabBarController.swift in Sources */,
 				A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */,
 				A25D4AF829DAE903002CBE11 /* LoginCoordinator.swift in Sources */,
 				A2BD85A929D74D3C002820CA /* RegisterCoordinator.swift in Sources */,
