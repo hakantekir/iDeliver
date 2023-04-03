@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, Storyboarded {
 
     let viewModel = RegisterViewModel()
     

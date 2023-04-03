@@ -27,4 +27,7 @@ class LoginViewController: UIViewController {
         viewModel.login(email: mailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        viewModel.register()
+    }
 }

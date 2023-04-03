@@ -28,4 +28,9 @@ class LoginCoordinator: Coordinator {
         let controller = MainTabBarController.instantiate(name: .main)
         navigationController.setViewControllers([controller], animated: true)
     }
+    
+    func showRegister() {
+        let controller = RegisterViewController.instantiate(name: .authentication)
+        navigationController.show(controller, sender: nil)
+    }
 }

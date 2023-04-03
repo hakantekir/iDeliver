@@ -86,20 +86,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-Gf-K7I">
-                                <rect key="frame" x="39.333333333333343" y="409" width="314.33333333333326" height="34"/>
+                                <rect key="frame" x="39.333333333333343" y="429" width="314.33333333333326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noB-8e-rma">
-                                <rect key="frame" x="39.333333333333343" y="483" width="314.33333333333326" height="35"/>
+                                <rect key="frame" x="39.333333333333343" y="503" width="314.33333333333326" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonTapped:" destination="osE-li-fRB" eventType="touchUpInside" id="pwf-pH-Ud3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-hz-ely">
+                                <rect key="frame" x="39.333333333333343" y="553" width="314.33333333333326" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="osE-li-fRB" eventType="touchUpInside" id="2kl-Ng-BYu"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-FF-RyM">
-                                <rect key="frame" x="39.333333333333343" y="345" width="314.33333333333326" height="34"/>
+                                <rect key="frame" x="39.333333333333343" y="365" width="314.33333333333326" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
@@ -111,11 +119,14 @@
                             <constraint firstItem="noB-8e-rma" firstAttribute="width" secondItem="uhd-b5-SV0" secondAttribute="width" multiplier="0.8" id="Mjk-ra-bwv"/>
                             <constraint firstItem="1J3-FF-RyM" firstAttribute="width" secondItem="ahW-Gf-K7I" secondAttribute="width" id="VH6-BQ-o0w"/>
                             <constraint firstItem="ahW-Gf-K7I" firstAttribute="width" secondItem="noB-8e-rma" secondAttribute="width" id="VPU-HH-pzQ"/>
+                            <constraint firstItem="Eoc-hz-ely" firstAttribute="width" secondItem="noB-8e-rma" secondAttribute="width" id="Wrl-1b-KAe"/>
                             <constraint firstItem="noB-8e-rma" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="ZDZ-Kr-wZH"/>
+                            <constraint firstItem="Eoc-hz-ely" firstAttribute="top" secondItem="noB-8e-rma" secondAttribute="bottom" constant="15" id="ans-gE-NDq"/>
                             <constraint firstItem="ahW-Gf-K7I" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="cLA-Fu-jiA"/>
                             <constraint firstItem="noB-8e-rma" firstAttribute="top" secondItem="ahW-Gf-K7I" secondAttribute="bottom" constant="40" id="f9I-fO-Tjp"/>
                             <constraint firstItem="ahW-Gf-K7I" firstAttribute="top" secondItem="1J3-FF-RyM" secondAttribute="bottom" constant="30" id="lFc-rD-7qD"/>
-                            <constraint firstItem="4Iy-jn-Dee" firstAttribute="bottom" secondItem="noB-8e-rma" secondAttribute="bottom" constant="300" id="re7-tU-ZZk"/>
+                            <constraint firstItem="4Iy-jn-Dee" firstAttribute="bottom" secondItem="Eoc-hz-ely" secondAttribute="bottom" constant="230" id="lu2-oQ-po4"/>
+                            <constraint firstItem="Eoc-hz-ely" firstAttribute="centerX" secondItem="4Iy-jn-Dee" secondAttribute="centerX" id="mDg-Ht-erV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">

@@ -37,4 +37,8 @@ class LoginViewModel {
             }
         }
     }
+    
+    func register() {
+        coordinator?.showRegister()
+    }
 }
