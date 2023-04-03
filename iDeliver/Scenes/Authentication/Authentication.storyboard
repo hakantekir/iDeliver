@@ -13,7 +13,7 @@
         <scene sceneID="Tye-sH-yTV">
             <objects>
                 <viewController storyboardIdentifier="RegisterViewController" id="fkb-xU-JS5" customClass="RegisterViewController" customModule="iDeliver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hVP-Fb-4fx">
+                    <view key="view" contentMode="scaleToFill" id="hVP-Fb-4fx" customClass="GradientView" customModule="iDeliver" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -57,6 +57,15 @@
                             <constraint firstItem="wyE-Vg-AQb" firstAttribute="top" secondItem="X6W-D1-9ab" secondAttribute="bottom" constant="40" id="oRR-KO-IQY"/>
                             <constraint firstItem="Iv9-m5-NSl" firstAttribute="width" secondItem="wyE-Vg-AQb" secondAttribute="width" id="ufM-9a-hvv"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" systemColor="systemMintColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="mailTextField" destination="WYw-d1-PHX" id="snX-K3-dz4"/>
@@ -72,7 +81,7 @@
         <scene sceneID="eug-gw-7sP">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="osE-li-fRB" customClass="LoginViewController" customModule="iDeliver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uhd-b5-SV0">
+                    <view key="view" contentMode="scaleToFill" id="uhd-b5-SV0" customClass="GradientView" customModule="iDeliver" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -85,9 +94,6 @@
                                 <rect key="frame" x="39.333333333333343" y="483" width="314.33333333333326" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="osE-li-fRB" eventType="touchUpInside" id="hwe-3N-Gav"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-FF-RyM">
                                 <rect key="frame" x="39.333333333333343" y="345" width="314.33333333333326" height="34"/>
@@ -108,6 +114,15 @@
                             <constraint firstItem="ahW-Gf-K7I" firstAttribute="top" secondItem="1J3-FF-RyM" secondAttribute="bottom" constant="30" id="lFc-rD-7qD"/>
                             <constraint firstItem="4Iy-jn-Dee" firstAttribute="bottom" secondItem="noB-8e-rma" secondAttribute="bottom" constant="300" id="re7-tU-ZZk"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" systemColor="systemMintColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" systemColor="systemPurpleColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="mailTextField" destination="1J3-FF-RyM" id="7Rr-3r-n9j"/>
@@ -122,6 +137,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

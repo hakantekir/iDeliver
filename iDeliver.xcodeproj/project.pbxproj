@@ -19,6 +19,7 @@
 		A25D4AF829DAE903002CBE11 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AF729DAE903002CBE11 /* LoginCoordinator.swift */; };
 		A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */; };
 		A25D4AFD29DAE922002CBE11 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFB29DAE922002CBE11 /* LoginManager.swift */; };
+		A25D4AFF29DB595B002CBE11 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4AFE29DB595B002CBE11 /* GradientView.swift */; };
 		A2BD859329D61462002820CA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BD859229D61462002820CA /* Authentication.storyboard */; };
 		A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859529D619BB002820CA /* RegisterViewController.swift */; };
 		A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859729D619CC002820CA /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 		A25D4AF729DAE903002CBE11 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		A25D4AFB29DAE922002CBE11 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		A25D4AFE29DB595B002CBE11 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		A2BD859229D61462002820CA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		A2BD859529D619BB002820CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2BD859729D619CC002820CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +95,6 @@
 				A269DBF329D1A70F00131CEE /* Resources */,
 				A2473CDA29D7809100A9210D /* Util */,
 				A258A5992997DE1400991838 /* Scenes */,
-				A210274D299504A10007C524 /* LaunchScreen.storyboard */,
 				A2102750299504A10007C524 /* Info.plist */,
 			);
 			path = iDeliver;
@@ -122,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				A2BD85A629D74AF6002820CA /* AlertViewHelper.swift */,
+				A25D4AFE29DB595B002CBE11 /* GradientView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 			children = (
 				A2102742299504A00007C524 /* AppDelegate.swift */,
 				A2102744299504A00007C524 /* SceneDelegate.swift */,
+				A210274D299504A10007C524 /* LaunchScreen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25D4AFF29DB595B002CBE11 /* GradientView.swift in Sources */,
 				A2BD85A529D63068002820CA /* User.swift in Sources */,
 				A2BD85A329D62F2C002820CA /* RegisterHelper.swift in Sources */,
 				A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */,
@@ -480,7 +484,7 @@
 				INFOPLIST_FILE = iDeliver/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -508,7 +512,7 @@
 				INFOPLIST_FILE = iDeliver/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
