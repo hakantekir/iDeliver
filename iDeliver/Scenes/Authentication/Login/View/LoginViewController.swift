@@ -9,18 +9,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let viewModel = LoginViewModel()
     
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureViewModel()
+    }
+    
+    func configureViewModel(){
+        viewModel.coordinator = LoginCoordinator(navigationController: navigationController ?? UINavigationController())
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        
+        viewModel.login(email: mailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
 }
