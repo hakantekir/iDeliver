@@ -94,6 +94,9 @@
                                 <rect key="frame" x="39.333333333333343" y="483" width="314.33333333333326" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="osE-li-fRB" eventType="touchUpInside" id="pwf-pH-Ud3"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mail Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1J3-FF-RyM">
                                 <rect key="frame" x="39.333333333333343" y="345" width="314.33333333333326" height="34"/>
