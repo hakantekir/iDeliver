@@ -21,16 +21,16 @@ enum NetworkError: Error {
     case apiError(APIError)
 }
 
-struct APIError: Decodable {
-    let code: Int
-    let reason: String
-    let message: String
+struct APIError: Decodable, Error {
+    let statusCode: Int?
+    let reason: String?
+    let message: String?
 }
 
 class NetworkHelper {
     static let shared = NetworkHelper()
     
-    private let baseURL = "http://192.168.1.173/"
+    private let baseURL = "http://192.168.1.173:8000/"
     
     func requestURL(endPoint: String) -> String {
         baseURL + endPoint

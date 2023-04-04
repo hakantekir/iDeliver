@@ -1,17 +1,16 @@
 //
-//  RegisterViewController.swift
+//  MainTabBarController.swift
 //  iDeliver
 //
-//  Created by Hakan Tekir on 30.03.2023.
+//  Created by Hakan Tekir on 3.04.2023.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class MainTabBarController: UITabBarController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
