@@ -9,6 +9,7 @@ import Foundation
 
 enum LoginEndpoint: String {
     case login = "api/v1/auth/login"
+    case verify = "api/v1/auth/verify"
     case forgotPassword = "api/v1/auth/forgot"
     
     var path: String {

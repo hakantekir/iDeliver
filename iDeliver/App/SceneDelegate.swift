@@ -8,24 +8,47 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-    var coordinator: LoginCoordinator?
-
+    var loginCoordinator: LoginCoordinator?
+    var mainCoordinator: MainCoordinator?
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        appWindow.windowScene = windowScene
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window.windowScene = windowScene
         
         let navigationController = UINavigationController()
-        coordinator = LoginCoordinator(navigationController: navigationController)
-        coordinator?.start()
         
-        appWindow.rootViewController = navigationController
-        appWindow.makeKeyAndVisible()
+        guard let data = KeychainManager.shared.load(key: "JWT") else {
+            loginCoordinator = LoginCoordinator(navigationController: navigationController)
+            loginCoordinator?.start()
+            
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
+            
+            self.window = window
+            return
+        }
         
-        window = appWindow
+        let token = String(data: data, encoding: .utf8)
+        LoginManager.shared.verifyToken(token: token ?? "") { response in
+            switch (response) {
+            case .success(let result):
+                DispatchQueue.main.sync {
+                    self.mainCoordinator = MainCoordinator(navigationController: navigationController)
+                    self.mainCoordinator?.start()
+                    
+                    window.rootViewController = navigationController
+                    window.makeKeyAndVisible()
+                    
+                    self.window = window
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 

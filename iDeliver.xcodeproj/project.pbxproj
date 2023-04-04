@@ -27,6 +27,7 @@
 		A25D4B1229DB712D002CBE11 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1129DB712D002CBE11 /* CartViewController.swift */; };
 		A25D4B1429DB7137002CBE11 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1329DB7137002CBE11 /* ProfileViewController.swift */; };
 		A25D4B1629DB7336002CBE11 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1529DB7336002CBE11 /* KeychainManager.swift */; };
+		A25D4B1829DBA042002CBE11 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25D4B1729DBA042002CBE11 /* MainCoordinator.swift */; };
 		A2BD859329D61462002820CA /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BD859229D61462002820CA /* Authentication.storyboard */; };
 		A2BD859629D619BB002820CA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859529D619BB002820CA /* RegisterViewController.swift */; };
 		A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BD859729D619CC002820CA /* LoginViewController.swift */; };
@@ -61,6 +62,7 @@
 		A25D4B1129DB712D002CBE11 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		A25D4B1329DB7137002CBE11 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A25D4B1529DB7336002CBE11 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		A25D4B1729DBA042002CBE11 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		A2BD859229D61462002820CA /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
 		A2BD859529D619BB002820CA /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2BD859729D619CC002820CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -174,11 +176,12 @@
 			isa = PBXGroup;
 			children = (
 				A25D4B0129DB6111002CBE11 /* Main.storyboard */,
+				A25D4B1729DBA042002CBE11 /* MainCoordinator.swift */,
+				A25D4B0A29DB6CC1002CBE11 /* MainTabBarController.swift */,
 				A25D4B0329DB64B2002CBE11 /* Home */,
 				A25D4B0C29DB70EA002CBE11 /* Search */,
 				A25D4B0D29DB70F2002CBE11 /* Cart */,
 				A25D4B0E29DB70F6002CBE11 /* Profile */,
-				A25D4B0A29DB6CC1002CBE11 /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				A258A59F2997E39200991838 /* Storyboarded.swift in Sources */,
 				A25D4B0B29DB6CC1002CBE11 /* MainTabBarController.swift in Sources */,
 				A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */,
+				A25D4B1829DBA042002CBE11 /* MainCoordinator.swift in Sources */,
 				A25D4AF829DAE903002CBE11 /* LoginCoordinator.swift in Sources */,
 				A2BD85A929D74D3C002820CA /* RegisterCoordinator.swift in Sources */,
 			);

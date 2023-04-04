@@ -37,4 +37,29 @@ class LoginManager: LoginManagerProtocol {
             }
         }
     }
+    
+    func verifyToken(token: String, completion: @escaping ((Result<User, APIError>) -> Void)) {
+        let user = User(token: token)
+        guard let body = try? JSONEncoder().encode(user) else {
+            return
+        }
+        
+        NetworkManager.shared.request(responseType: User.self,
+                                      url: LoginEndpoint.verify.path,
+                                      httpMethod: .post,
+                                      body: body) { response in
+            switch (response) {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(let error):
+                switch (error) {
+                case .apiError(let apiError):
+                    completion(.failure(apiError))
+                default:
+                    let apiError = APIError(statusCode: 0, reason: "Connection Error", message: "Please check your internet connection!")
+                    completion(.failure(apiError))
+                }
+            }
+        }
+    }
 }
