@@ -11,6 +11,7 @@ import UIKit
 enum StoryboardName: String {
     case main = "Main"
     case authentication = "Authentication"
+    case homeView = "Home"
 }
 
 protocol Storyboarded {
