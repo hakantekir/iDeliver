@@ -166,8 +166,8 @@
 		A25D4AF929DAE922002CBE11 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */,
 				A25D4AFB29DAE922002CBE11 /* LoginManager.swift */,
+				A25D4AFA29DAE922002CBE11 /* LoginHelper.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";

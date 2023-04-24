@@ -10,8 +10,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var loginCoordinator: LoginCoordinator?
-    var mainCoordinator: MainCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -22,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         
         guard let data = KeychainManager.shared.load(key: "JWT") else {
-            loginCoordinator = LoginCoordinator(navigationController: navigationController)
-            loginCoordinator?.start()
+            let coordinator = LoginCoordinator(navigationController: navigationController)
+            coordinator.start()
             
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
@@ -34,21 +32,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let token = String(data: data, encoding: .utf8)
         LoginManager.shared.verifyToken(token: token ?? "") { response in
-            switch (response) {
-            case .success(let result):
-                DispatchQueue.main.sync {
-                    self.mainCoordinator = MainCoordinator(navigationController: navigationController)
-                    self.mainCoordinator?.start()
-                    
-                    window.rootViewController = navigationController
-                    window.makeKeyAndVisible()
-                    
-                    self.window = window
+            DispatchQueue.main.sync {
+                switch (response) {
+                case .success(let result):
+                    let coordinator = MainCoordinator(navigationController: navigationController)
+                    coordinator.start()
+                case .failure(_):
+                    let coordinator = LoginCoordinator(navigationController: navigationController)
+                    coordinator.start()
                 }
-            case .failure(let error):
-                print(error)
+                window.rootViewController = navigationController
+                window.makeKeyAndVisible()
+                
+                self.window = window
             }
         }
     }
 }
-
