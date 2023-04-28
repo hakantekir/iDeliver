@@ -23,7 +23,7 @@ class RegisterCoordinator: Coordinator {
     func presentAlert(_ alertController: UIAlertController, animated: Bool, completion: (() -> Void)?) {
         navigationController.present(alertController, animated: animated, completion: completion)
     }
-
+    
     func showMain() {
         let controller = MainTabBarController.instantiate(name: .main)
         navigationController.setViewControllers([controller], animated: true)
