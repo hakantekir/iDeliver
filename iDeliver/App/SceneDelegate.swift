@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var loginCoordinator: LoginCoordinator?
     var mainCoordinator: MainCoordinator?
+    var loadingCoordinator: LoadingCoordinator?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -22,8 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         
         guard let data = KeychainManager.shared.load(key: "JWT") else {
-            loginCoordinator = LoginCoordinator(navigationController: navigationController)
-            loginCoordinator?.start()
+            
+            loadingCoordinator = LoadingCoordinator(navigationController: navigationController)
+            loadingCoordinator?.start()
+            
             
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
@@ -33,7 +36,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         
         let token = String(data: data, encoding: .utf8)
+        
         LoginManager.shared.verifyToken(token: token ?? "") { response in
+        
             switch (response) {
             case .success(let result):
                 DispatchQueue.main.sync {
