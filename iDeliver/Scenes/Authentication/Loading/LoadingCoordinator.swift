@@ -20,6 +20,7 @@ class LoadingCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
+    
     func start() {
         let controller = UIStoryboard(name: "Authentication", bundle: nil).instantiateViewController(withIdentifier: "\(LoadingViewController.self)")
         navigationController.show(controller, sender: nil)
@@ -33,8 +34,9 @@ class LoadingCoordinator: Coordinator {
     
     func showLogin() {
         let controller = LoginViewController.instantiate(name: .authentication)
+                
+        navigationController.show(controller, sender: true)
         
-        navigationController.setViewControllers([controller], animated: true)
     }
     
 }

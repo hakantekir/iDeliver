@@ -11,6 +11,9 @@
 		6EADB06129FBB9E500E6AB01 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06029FBB9E500E6AB01 /* LoadingViewController.swift */; };
 		6EADB06329FBBA8A00E6AB01 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06229FBBA8A00E6AB01 /* LoadingCollectionViewCell.swift */; };
 		6EADB06D29FBC8B400E6AB01 /* LoadingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06C29FBC8B400E6AB01 /* LoadingSlide.swift */; };
+		6EADB06F29FC209600E6AB01 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06E29FC209600E6AB01 /* AppButton.swift */; };
+		6EADB07129FC304000E6AB01 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB07029FC304000E6AB01 /* LoadingViewModel.swift */; };
+		6EADB07429FC4C3D00E6AB01 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB07329FC4C3D00E6AB01 /* Textfield.swift */; };
 		A2102743299504A00007C524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102742299504A00007C524 /* AppDelegate.swift */; };
 		A2102745299504A00007C524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102744299504A00007C524 /* SceneDelegate.swift */; };
 		A210274C299504A10007C524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A210274B299504A10007C524 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		6EADB06929FBC3E700E6AB01 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		6EADB06A29FBC3E700E6AB01 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		6EADB06C29FBC8B400E6AB01 /* LoadingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSlide.swift; sourceTree = "<group>"; };
+		6EADB06E29FC209600E6AB01 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		6EADB07029FC304000E6AB01 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		6EADB07329FC4C3D00E6AB01 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		A210273F299504A00007C524 /* iDeliver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDeliver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2102742299504A00007C524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2102744299504A00007C524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		6EADB05B29FB07D500E6AB01 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6EADB07029FC304000E6AB01 /* LoadingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 		6EADB06429FBBB7400E6AB01 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				6EADB07229FC4C2F00E6AB01 /* AppTextfield */,
 				6EADB06529FBBB8100E6AB01 /* AppButton */,
 			);
 			path = CustomView;
@@ -134,6 +142,7 @@
 		6EADB06529FBBB8100E6AB01 /* AppButton */ = {
 			isa = PBXGroup;
 			children = (
+				6EADB06E29FC209600E6AB01 /* AppButton.swift */,
 			);
 			path = AppButton;
 			sourceTree = "<group>";
@@ -161,6 +170,14 @@
 				6EADB06C29FBC8B400E6AB01 /* LoadingSlide.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6EADB07229FC4C2F00E6AB01 /* AppTextfield */ = {
+			isa = PBXGroup;
+			children = (
+				6EADB07329FC4C3D00E6AB01 /* Textfield.swift */,
+			);
+			path = AppTextfield;
 			sourceTree = "<group>";
 		};
 		A2102736299504A00007C524 = {
@@ -473,7 +490,9 @@
 				A2BD85A529D63068002820CA /* User.swift in Sources */,
 				A2BD85A329D62F2C002820CA /* RegisterHelper.swift in Sources */,
 				6EADB06329FBBA8A00E6AB01 /* LoadingCollectionViewCell.swift in Sources */,
+				6EADB07429FC4C3D00E6AB01 /* Textfield.swift in Sources */,
 				A2BD859829D619CC002820CA /* LoginViewController.swift in Sources */,
+				6EADB07129FC304000E6AB01 /* LoadingViewModel.swift in Sources */,
 				A25D4B1629DB7336002CBE11 /* KeychainManager.swift in Sources */,
 				A2BD859E29D6294A002820CA /* RegisterViewModel.swift in Sources */,
 				A25D4B0929DB6C85002CBE11 /* HomeViewController.swift in Sources */,
@@ -494,6 +513,7 @@
 				A2102745299504A00007C524 /* SceneDelegate.swift in Sources */,
 				A2BD85A129D62F20002820CA /* RegisterManager.swift in Sources */,
 				A258A59F2997E39200991838 /* Storyboarded.swift in Sources */,
+				6EADB06F29FC209600E6AB01 /* AppButton.swift in Sources */,
 				A25D4B0B29DB6CC1002CBE11 /* MainTabBarController.swift in Sources */,
 				A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */,
 				A25D4B1829DBA042002CBE11 /* MainCoordinator.swift in Sources */,

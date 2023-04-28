@@ -7,10 +7,12 @@
 
 import UIKit
 
-class LoadingViewController: UIViewController {
-
-    //MARK: UIElements
+class LoadingViewController: UIViewController, Storyboarded {
     
+    let viewModel = LoadingViewModel()
+    
+    
+    //MARK: UIElements
     @IBOutlet weak var loadinCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
@@ -18,7 +20,6 @@ class LoadingViewController: UIViewController {
     
     //MARK: Variables
     var loadingSlidesCount = LoadingSlide.loadingContenData.count
-    
     var currentPageNumber = 0 {
         didSet {
             if currentPageNumber == loadingSlidesCount - 1 {
@@ -32,12 +33,16 @@ class LoadingViewController: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         loadinCollectionView.delegate = self
         loadinCollectionView.dataSource = self
-     
+        
         pageControl.numberOfPages = loadingSlidesCount
-
+        
+    }
+    
+    func configureViewModel(){
+        viewModel.coordinator = LoadingCoordinator(navigationController: navigationController ?? UINavigationController())
     }
     
     
@@ -45,15 +50,17 @@ class LoadingViewController: UIViewController {
     @IBAction func nextButtonClicked(_ sender: Any) {
         
         if currentPageNumber == loadingSlidesCount - 1 {
-           print("Next pages")
+            print("next login tapped()")
+            viewModel.nextLogin()
             
             
         } else {
+            
             currentPageNumber += 1
             pageControl.currentPage += 1
             let indexPath = IndexPath(item: currentPageNumber, section: 0)
             loadinCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-           
+            
         }
         
     }
@@ -63,8 +70,8 @@ class LoadingViewController: UIViewController {
 
 
 extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-
-
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return loadingSlidesCount
     }
@@ -96,8 +103,6 @@ extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         pageControl.currentPage = currentPageNumber
         currentPageNumber = currentPage // Next - Get started değişim için gerekli
-
-        
         
     }
     

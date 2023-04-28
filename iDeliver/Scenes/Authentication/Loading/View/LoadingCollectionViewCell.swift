@@ -11,7 +11,7 @@ class LoadingCollectionViewCell: UICollectionViewCell {
     
     
     static let identifier = String(describing: LoadingCollectionViewCell.self)
-
+    
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
@@ -24,6 +24,4 @@ class LoadingCollectionViewCell: UICollectionViewCell {
         self.descriptionLabel.text = slide.description
         
     }
-    
-    
 }
