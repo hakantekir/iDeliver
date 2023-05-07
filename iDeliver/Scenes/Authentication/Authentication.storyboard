@@ -56,7 +56,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8Od-dx-5Pi">
                                                     <rect key="frame" x="16" y="406" width="358" height="132"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your  Dream Job  Here!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-K2-ljk">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Your  Dream Job  Here!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-K2-ljk">
                                                             <rect key="frame" x="0.0" y="0.0" width="358" height="29.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="22"/>
                                                             <nil key="textColor"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="-1127" y="-152"/>
         </scene>
-        <!--Register View Controller-->
+        <!--View Controller-->
         <scene sceneID="Tye-sH-yTV">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="fkb-xU-JS5" customClass="RegisterViewController" customModule="iDeliver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="fkb-xU-JS5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hVP-Fb-4fx" customClass="GradientView" customModule="iDeliver" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,18 +328,13 @@
             <point key="canvasLocation" x="-147" y="-152"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="r0u-gb-Klj">
-            <size key="intrinsicContentSize" width="75" height="34.333333333333336"/>
-        </designable>
-    </designables>
     <resources>
         <image name="image2" width="338" height="255"/>
         <namedColor name="BackgroundColor2">
-            <color red="0.074509803921568626" green="0.0039215686274509803" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.075000002980232239" green="0.0040000001899898052" blue="0.37599998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textColor">
-            <color red="0.32156862745098036" green="0.29411764705882354" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32199999690055847" green="0.29399999976158142" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
