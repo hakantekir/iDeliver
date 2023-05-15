@@ -12,10 +12,6 @@ class LoadingViewModel {
     
     var coordinator: LoadingCoordinator?
     
-    func nextLogin() {
-        coordinator?.showLogin()
-    }
- 
-    
+    let slides = LoadingSlide.loadingContentData
     
 }

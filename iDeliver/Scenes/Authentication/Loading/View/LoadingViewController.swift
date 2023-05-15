@@ -12,13 +12,12 @@ class LoadingViewController: UIViewController, Storyboarded {
     let viewModel = LoadingViewModel()
     
     //MARK: UIElements
-    @IBOutlet weak var loadinCollectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButton: UIButton!
     
     
     //MARK: Variables
-    var loadingSlidesCount = LoadingSlide.loadingContenData.count
     var currentPageNumber = 0 {
         didSet {
             pageControl.currentPage = currentPageNumber
@@ -34,12 +33,12 @@ class LoadingViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadinCollectionView.delegate = self
-        loadinCollectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         configureViewModel()
         
-        pageControl.numberOfPages = loadingSlidesCount
+        pageControl.numberOfPages = viewModel.slides.count
     }
     
     func configureViewModel(){
@@ -48,13 +47,13 @@ class LoadingViewController: UIViewController, Storyboarded {
     
     @IBAction func nextButtonClicked(_ sender: Any) {
         if pageControl.currentPage == pageControl.numberOfPages - 1 {
-            viewModel.nextLogin()
+            viewModel.coordinator?.showLogin()
         } else {
             currentPageNumber += 1
             let indexPath = IndexPath(row: currentPageNumber, section: 0)
-            loadinCollectionView.isPagingEnabled = false
-            loadinCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            loadinCollectionView.isPagingEnabled = true
+            collectionView.isPagingEnabled = false
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            collectionView.isPagingEnabled = true
         }
     }
 }
@@ -64,7 +63,7 @@ extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return loadingSlidesCount
+        return viewModel.slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -72,7 +71,7 @@ extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataS
         let reuseIdentifier = LoadingCollectionViewCell.identifier
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! LoadingCollectionViewCell
         
-        cell.setupSlideView(LoadingSlide.loadingContenData[indexPath.row])
+        cell.setupSlideView(viewModel.slides[indexPath.row])
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

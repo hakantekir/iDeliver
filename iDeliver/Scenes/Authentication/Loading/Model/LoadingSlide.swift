@@ -14,7 +14,7 @@ struct LoadingSlide {
     let description: String
     
     
-    static let loadingContenData: [LoadingSlide] = [
+    static let loadingContentData: [LoadingSlide] = [
         
         LoadingSlide(imageView: UIImage(named: "image0")! , header: "Find Your Dream Job Here!", description: "Explore all the most exciting job roles based on your interest and study major."),
         

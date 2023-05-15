@@ -132,7 +132,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadinCollectionView" destination="Q0N-YC-Bsy" id="Jng-Mr-utP"/>
+                        <outlet property="collectionView" destination="Q0N-YC-Bsy" id="o6V-Pj-1fG"/>
                         <outlet property="nextButton" destination="r0u-gb-Klj" id="2yS-sg-NAO"/>
                         <outlet property="pageControl" destination="aeM-fZ-28O" id="o0y-Gv-Anb"/>
                     </connections>
