@@ -11,7 +11,6 @@ class LoadingViewController: UIViewController, Storyboarded {
     
     let viewModel = LoadingViewModel()
     
-    
     //MARK: UIElements
     @IBOutlet weak var loadinCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -22,7 +21,8 @@ class LoadingViewController: UIViewController, Storyboarded {
     var loadingSlidesCount = LoadingSlide.loadingContenData.count
     var currentPageNumber = 0 {
         didSet {
-            if currentPageNumber == loadingSlidesCount - 1 {
+            pageControl.currentPage = currentPageNumber
+            if currentPageNumber == pageControl.numberOfPages - 1 {
                 nextButton.setTitle("Get Started", for: .normal)
             } else {
                 nextButton.setTitle("Next", for: .normal)
@@ -37,35 +37,26 @@ class LoadingViewController: UIViewController, Storyboarded {
         loadinCollectionView.delegate = self
         loadinCollectionView.dataSource = self
         
-        pageControl.numberOfPages = loadingSlidesCount
+        configureViewModel()
         
+        pageControl.numberOfPages = loadingSlidesCount
     }
     
     func configureViewModel(){
         viewModel.coordinator = LoadingCoordinator(navigationController: navigationController ?? UINavigationController())
     }
     
-    
-    
     @IBAction func nextButtonClicked(_ sender: Any) {
-        
-        if currentPageNumber == loadingSlidesCount - 1 {
-            print("next login tapped()")
+        if pageControl.currentPage == pageControl.numberOfPages - 1 {
             viewModel.nextLogin()
-            
-            
         } else {
-            
             currentPageNumber += 1
-            pageControl.currentPage += 1
-            let indexPath = IndexPath(item: currentPageNumber, section: 0)
+            let indexPath = IndexPath(row: currentPageNumber, section: 0)
+            loadinCollectionView.isPagingEnabled = false
             loadinCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            
+            loadinCollectionView.isPagingEnabled = true
         }
-        
     }
-    
-    
 }
 
 
@@ -83,11 +74,7 @@ extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         cell.setupSlideView(LoadingSlide.loadingContenData[indexPath.row])
         return cell
-        
     }
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
@@ -96,16 +83,7 @@ extension LoadingViewController: UICollectionViewDelegate, UICollectionViewDataS
         return 0.0
     }
     
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let width = scrollView.frame.width
-        let currentPage = Int(scrollView.contentOffset.x) / Int(width)
-        
-        pageControl.currentPage = currentPageNumber
-        currentPageNumber = currentPage // Next - Get started değişim için gerekli
-        
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        currentPageNumber = indexPath.row
     }
-    
-    
-    
 }

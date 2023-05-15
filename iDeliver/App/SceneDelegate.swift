@@ -27,7 +27,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             loadingCoordinator = LoadingCoordinator(navigationController: navigationController)
             loadingCoordinator?.start()
             
-            
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
             

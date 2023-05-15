@@ -26,17 +26,13 @@ class LoadingCoordinator: Coordinator {
         navigationController.show(controller, sender: nil)
     }
     
-    
-    
     func presentAlert(_ alertController: UIAlertController, animated: Bool, completion: (() -> Void)?) {
         navigationController.present(alertController, animated: animated, completion: completion)
     }
     
     func showLogin() {
         let controller = LoginViewController.instantiate(name: .authentication)
-                
-        navigationController.show(controller, sender: true)
-        
+        navigationController.viewControllers = [controller]
     }
     
 }
