@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var loginCoordinator: LoginCoordinator?
     var mainCoordinator: MainCoordinator?
     var loadingCoordinator: LoadingCoordinator?
-    
+  
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -23,9 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         
         guard let data = KeychainManager.shared.load(key: "JWT") else {
-            
+          
             loadingCoordinator = LoadingCoordinator(navigationController: navigationController)
             loadingCoordinator?.start()
+
             
             window.rootViewController = navigationController
             window.makeKeyAndVisible()
@@ -48,11 +49,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     window.makeKeyAndVisible()
                     
                     self.window = window
+
                 }
-            case .failure(let error):
-                print(error)
+                window.rootViewController = navigationController
+                window.makeKeyAndVisible()
+                
+                self.window = window
             }
         }
     }
 }
-
