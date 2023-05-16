@@ -9,17 +9,20 @@ import Foundation
 import UIKit
 
 class LoginViewModel {
+    
     var coordinator: LoginCoordinator?
     let manager = LoginManager.shared
     let keychainManager = KeychainManager.shared
     
-    func login (email: String, password: String) {  
+    func login (email: String, password: String) {
         if (email.isEmpty || password.isEmpty) {
             let alert = AlertViewHelper.showAlert(title: "Missing Credentials", message: "Please provide a name, email, and password")
             self.coordinator?.presentAlert(alert, animated: true, completion: nil)
             return
         }
+        
         var user = User(email: email, password: password)
+        
         manager.loginRequest(user: user) { response in
             switch response {
             case .success(let response):

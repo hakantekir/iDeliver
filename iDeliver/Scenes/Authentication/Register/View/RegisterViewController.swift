@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController, Storyboarded {
         configureViewModel()
     }
     
-    func configureViewModel(){
+    func configureViewModel() {
         viewModel.coordinator = RegisterCoordinator(navigationController: navigationController ?? UINavigationController())
     }
     
