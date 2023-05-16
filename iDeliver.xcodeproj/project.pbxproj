@@ -11,7 +11,7 @@
 		6EADB06129FBB9E500E6AB01 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06029FBB9E500E6AB01 /* LoadingViewController.swift */; };
 		6EADB06329FBBA8A00E6AB01 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06229FBBA8A00E6AB01 /* LoadingCollectionViewCell.swift */; };
 		6EADB06D29FBC8B400E6AB01 /* LoadingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06C29FBC8B400E6AB01 /* LoadingSlide.swift */; };
-		6EADB06F29FC209600E6AB01 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06E29FC209600E6AB01 /* AppButton.swift */; };
+		6EADB06F29FC209600E6AB01 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB06E29FC209600E6AB01 /* CustomButton.swift */; };
 		6EADB07129FC304000E6AB01 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB07029FC304000E6AB01 /* LoadingViewModel.swift */; };
 		6EADB07429FC4C3D00E6AB01 /* Textfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EADB07329FC4C3D00E6AB01 /* Textfield.swift */; };
 		A2102743299504A00007C524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2102742299504A00007C524 /* AppDelegate.swift */; };
@@ -54,7 +54,7 @@
 		6EADB06929FBC3E700E6AB01 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		6EADB06A29FBC3E700E6AB01 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		6EADB06C29FBC8B400E6AB01 /* LoadingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSlide.swift; sourceTree = "<group>"; };
-		6EADB06E29FC209600E6AB01 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		6EADB06E29FC209600E6AB01 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		6EADB07029FC304000E6AB01 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
 		6EADB07329FC4C3D00E6AB01 /* Textfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield.swift; sourceTree = "<group>"; };
 		A210273F299504A00007C524 /* iDeliver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDeliver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,17 +134,17 @@
 			isa = PBXGroup;
 			children = (
 				6EADB07229FC4C2F00E6AB01 /* AppTextfield */,
-				6EADB06529FBBB8100E6AB01 /* AppButton */,
+				6EADB06529FBBB8100E6AB01 /* CustomButton */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
 		};
-		6EADB06529FBBB8100E6AB01 /* AppButton */ = {
+		6EADB06529FBBB8100E6AB01 /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
-				6EADB06E29FC209600E6AB01 /* AppButton.swift */,
+				6EADB06E29FC209600E6AB01 /* CustomButton.swift */,
 			);
-			path = AppButton;
+			path = CustomButton;
 			sourceTree = "<group>";
 		};
 		6EADB06629FBC3A300E6AB01 /* Extension */ = {
@@ -513,7 +513,7 @@
 				A2102745299504A00007C524 /* SceneDelegate.swift in Sources */,
 				A2BD85A129D62F20002820CA /* RegisterManager.swift in Sources */,
 				A258A59F2997E39200991838 /* Storyboarded.swift in Sources */,
-				6EADB06F29FC209600E6AB01 /* AppButton.swift in Sources */,
+				6EADB06F29FC209600E6AB01 /* CustomButton.swift in Sources */,
 				A25D4B0B29DB6CC1002CBE11 /* MainTabBarController.swift in Sources */,
 				A25D4AFC29DAE922002CBE11 /* LoginHelper.swift in Sources */,
 				A25D4B1829DBA042002CBE11 /* MainCoordinator.swift in Sources */,
